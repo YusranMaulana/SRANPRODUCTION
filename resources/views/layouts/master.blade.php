@@ -498,7 +498,7 @@
   </aside>
 
   <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
+  {{-- <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <div class="container-fluid">
@@ -546,7 +546,7 @@
 
     </section>
     <!-- /.content -->
-  </div>
+  </div> --}}
   <!-- /.content-wrapper -->
 
   <footer class="main-footer">
@@ -560,6 +560,8 @@
   <aside class="control-sidebar control-sidebar-dark">
     <!-- Control sidebar content goes here -->
   </aside>
+
+
   <!-- /.control-sidebar -->
 </div>
 <!-- ./wrapper -->
