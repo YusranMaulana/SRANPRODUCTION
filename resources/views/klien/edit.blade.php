@@ -6,7 +6,7 @@
         <div class="container-fluid">
           <div class="row mb-2">
             <div class="col-sm-6">
-              <h1>Edit klien</h1>
+              <h1>klien</h1>
             </div>
             <div class="col-sm-6">
               <ol class="breadcrumb float-sm-right">
@@ -45,23 +45,23 @@
               <input type="text" name="nama" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
             </div>
             <div class="mb-3">
-              <label for="exampleInputPassword1" class="form-label">Email</label>
+              <label for="exampleInputPassword1" class="form-label">email</label>
               <input type="text" name="email" class="form-control" id="exampleInputPassword1">
             </div>
             <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">paket</label>
-              <input type="text" name="paket1_id" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <label for="exampleInputPassword1" class="form-label">paket</label>
+              <input type="number" name="paket" class="form-control" id="exampleInputPassword1">
             </div>
             <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">tanggal boking</label>
-              <input type="text" name="tgl_boking" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <label for="exampleInputPassword1" class="form-label">tanggal boking</label>
+              <input type="date" name="tgl_pembokingan" class="form-control" id="exampleInputPassword1">
             </div>
             <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">boking</label>
-              <input type="text" name="pembokingan" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <label for="exampleInputPassword1" class="form-label">bokingan</label>
+              <input type="text" name="pembokingan" class="form-control" id="exampleInputPassword1">
             </div>
             <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">pembayaran</label>
+              <label for="exampleInputEmail1" class="form-label">harga</label>
               <input type="text" name="pembayaran" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
             </div>
             

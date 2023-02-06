@@ -165,7 +165,7 @@
     <!-- Brand Logo -->
     <a href="../../index3.html" class="brand-link">
       <img src="../../dist/img/logo 2023 .png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light">SRAN PRODUCTION</span>
+      <span class="brand-text font-weight-light"><h5>SRAN PRODUCTION</h5></span>
     </a>
 
     <!-- Sidebar -->

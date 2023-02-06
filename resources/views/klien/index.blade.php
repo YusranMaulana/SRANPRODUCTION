@@ -55,7 +55,7 @@
                     <td>{{$item-> nama}}</td>
                     <td>{{$item-> email}}</td>
                     <td>{{$item-> tgl_boking}}</td>
-                    <td>{{$item-> boking}}</td>
+                    <td>{{$item-> pembokingan}}</td>
                     <td>{{$item-> pembayaran}}</td>
                     <td>
                         <a href="/klien/edit/{{$item->id}}" class="btn btn-sm btn-info">edit</a>
