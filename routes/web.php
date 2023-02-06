@@ -1,4 +1,4 @@
-<?php
+                                                                                                                    <?php
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\KlienControllers;
@@ -24,5 +24,8 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::middleware('auth')-> group (function(){
     //manajemen klien
-    route::get('/klien',[KlienController::class, 'index']);
+    route::get('/klien',[KlienControllers::class, 'index']);
+    Route::get('/klien/form', [KlienControllers::class, 'create']);
+    Route::post('/klien', [KlienControllers::class, 'store']);
+    Route::get('/klien/edit/{id}', [KlienControllers::class, 'edit']);
 });

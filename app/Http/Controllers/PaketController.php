@@ -3,9 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\klien;
 
-class KlienControllers extends Controller
+class PaketController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,10 +13,7 @@ class KlienControllers extends Controller
      */
     public function index()
     {
-        $nomor = 1;
-        $klien = klien::all();
-        return view('klien.index',compact('klien','nomor'));
-
+        //
     }
 
     /**
@@ -27,7 +23,7 @@ class KlienControllers extends Controller
      */
     public function create()
     {
-        return view('klien.form');
+        //
     }
 
     /**
@@ -38,15 +34,7 @@ class KlienControllers extends Controller
      */
     public function store(Request $request)
     {
-        $klien = new klien;
-
-        $klien -> nama = $request->nama;
-        $klien -> email = $request->email;
-        $klien -> paket1 = $request->paket;
-        $klien -> tgl_pembokingan = $request->tgl_pembokingan;
-        $klien -> pembokingan = $request->boking;
-        $klien -> pembayaran = $request->pembayaran;
-        $klien -> save();
+        //
     }
 
     /**
