@@ -49,8 +49,15 @@
               <input type="text" name="email" class="form-control" id="exampleInputPassword1">
             </div>
             <div class="mb-3">
-              <label for="exampleInputPassword1" class="form-label">paket</label>
-              <input type="number" name="paket" class="form-control" id="exampleInputPassword1">
+              <label for="exampleInputPassword1" class="form-label">Jurusan</label>
+              <input type="text" name="jurusan" class="form-control" id="exampleInputPassword1">
+              <label for="exampleInputEmail1" class="form-label">JURUSAN</label>
+              <select name="jurusan" class="form-control" id="">
+                <option value="">-Pilih Paket-</option>
+                @foreach($klien as $data)
+                <option value="{{$data->id}}">{{$data->kode}} - {{$data->jurusan}}</option>
+                @endforeach
+              </select>
             </div>
             <div class="mb-3">
               <label for="exampleInputPassword1" class="form-label">tanggal boking</label>
