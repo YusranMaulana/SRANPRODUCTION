@@ -42,11 +42,13 @@ class KlienControllers extends Controller
 
         $klien -> nama = $request->nama;
         $klien -> email = $request->email;
-        $klien -> paket1 = $request->paket;
-        $klien -> tgl_pembokingan = $request->tgl_pembokingan;
+        $klien -> paket1_id = $request->paket;
+        $klien -> tgl_boking = $request->tgl_pembokingan;
         $klien -> pembokingan = $request->boking;
         $klien -> pembayaran = $request->pembayaran;
         $klien -> save();
+
+        return redirect('/klien');
     }
 
     /**

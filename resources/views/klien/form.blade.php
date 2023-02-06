@@ -38,19 +38,27 @@
 
       <div class="card-body">
 
-        <form method="POST" action="/jurusan">
+        <form method="POST" action="/klien">
             @csrf
             <div class="mb-3">
               <label for="exampleInputEmail1" class="form-label">Nama</label>
               <input type="text" name="nama" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
             </div>
             <div class="mb-3">
-              <label for="exampleInputPassword1" class="form-label">No Hp</label>
-              <input type="text" name="no_hp" class="form-control" id="exampleInputPassword1">
+              <label for="exampleInputPassword1" class="form-label">email</label>
+              <input type="text" name="email" class="form-control" id="exampleInputPassword1">
             </div>
             <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">Harga</label>
-              <input type="text" name="harga" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <label for="exampleInputPassword1" class="form-label">tanggal boking</label>
+              <input type="date" name="tgl_boking" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">bokingan</label>
+              <input type="text" name="pembokingan" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">harga</label>
+              <input type="text" name="pembayaran" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
             </div>
             
             <button type="submit" class="btn btn-primary">Tambah Data</button>
