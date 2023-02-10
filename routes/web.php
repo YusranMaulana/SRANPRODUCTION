@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\KlienControllers;
+use App\Http\Controllers\PaketControllers;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,4 +30,10 @@ Route::middleware('auth')-> group (function(){
     Route::post('/klien', [KlienControllers::class, 'store']);
     Route::get('/klien/edit/{id}', [KlienControllers::class, 'edit']);
     Route::delete('/klien/{id}', [KlienControllers::class, 'destroy']);
+
+    route::get('/paket',[PaketControllers::class, 'index']);
+    Route::get('/Paket/form', [PaketControllers::class, 'create']);
+    Route::post('/Paket', [PaketControllers::class, 'store']);
+    Route::get('/Paket/edit/{id}', [PaketControllers::class, 'edit']);
+    Route::delete('/Paket/{id}', [PaketControllers::class, 'destroy']);
 });
