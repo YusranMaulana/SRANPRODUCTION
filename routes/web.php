@@ -28,4 +28,5 @@ Route::middleware('auth')-> group (function(){
     Route::get('/klien/form', [KlienControllers::class, 'create']);
     Route::post('/klien', [KlienControllers::class, 'store']);
     Route::get('/klien/edit/{id}', [KlienControllers::class, 'edit']);
+    Route::delete('/klien/{id}', [KlienControllers::class, 'destroy']);
 });

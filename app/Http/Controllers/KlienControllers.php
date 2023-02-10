@@ -93,6 +93,9 @@ class KlienControllers extends Controller
      */
     public function destroy($id)
     {
-        //
+        $klien = klien::find($id);
+        $klien->delete();
+
+        return redirect('/klien');
     }
 }
