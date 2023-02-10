@@ -13,7 +13,9 @@ class PaketController extends Controller
      */
     public function index()
     {
-        //
+        $nomor = 1;
+        $paket = paket::all();
+        return view('paket.index',compact('paket','nomor'));
     }
 
     /**
@@ -23,7 +25,7 @@ class PaketController extends Controller
      */
     public function create()
     {
-        //
+        return view('paket.form');
     }
 
     /**
