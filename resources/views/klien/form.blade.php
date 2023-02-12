@@ -48,6 +48,10 @@
               <label for="exampleInputPassword1" class="form-label">email</label>
               <input type="text" name="email" class="form-control" id="exampleInputPassword1">
             </div>
+                        <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">paket</label>
+              <input type="text" name="paket" class="form-control" id="exampleInputPassword1">
+            </div>
             <div class="mb-3">
               <label for="exampleInputPassword1" class="form-label">tanggal boking</label>
               <input type="date" name="tgl_pembokingan" class="form-control" id="exampleInputPassword1">
