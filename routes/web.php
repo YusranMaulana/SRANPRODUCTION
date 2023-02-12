@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\KlienControllers;
-use App\Http\Controllers\PaketControllers;
+use App\Http\Controllers\PaketController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,15 +25,15 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::middleware('auth')-> group (function(){
     //manajemen klien
-    route::get('/klien',[KlienControllers::class, 'index']);
+    Route::get('/klien',[KlienControllers::class, 'index']);
     Route::get('/klien/form', [KlienControllers::class, 'create']);
     Route::post('/klien', [KlienControllers::class, 'store']);
     Route::get('/klien/edit/{id}', [KlienControllers::class, 'edit']);
     Route::delete('/klien/{id}', [KlienControllers::class, 'destroy']);
 
-    route::get('/paket',[PaketControllers::class, 'index']);
-    Route::get('/Paket/form', [PaketControllers::class, 'create']);
-    Route::post('/Paket', [PaketControllers::class, 'store']);
-    Route::get('/Paket/edit/{id}', [PaketControllers::class, 'edit']);
-    Route::delete('/Paket/{id}', [PaketControllers::class, 'destroy']);
+    Route::get('/paket',[PaketController::class, 'index']);
+    Route::get('/paket/form', [PaketController::class, 'create']);
+    Route::post('/paket', [PaketController::class, 'store']);
+    Route::get('/paket/edit/{id}', [PaketController::class, 'edit']);
+    Route::delete('/paket/{id}', [PaketController::class, 'destroy']);
 });
