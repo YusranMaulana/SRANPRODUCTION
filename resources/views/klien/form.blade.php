@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@section('judul', 'hair artis')
+@section('judul', 'data klien')
 @section('content-header')
 
     <section class="content-header">
