@@ -51,7 +51,7 @@
             <div class="mb-3">
               <label for="exampleInputEmail1" class="form-label">Paketan</label>
               <select name="paket1_id" class="form-control" id="">
-                <option value="">-Pilih Jurusan-</option>
+                <option value="">-Pilih paket-</option>
                 @foreach($klien as $data)
                 <option value="{{$data->id}}">{{$data->kode}} - {{$data->klien}}</option>
                 @endforeach
