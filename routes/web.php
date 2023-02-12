@@ -29,11 +29,13 @@ Route::middleware('auth')-> group (function(){
     Route::get('/klien/form', [KlienControllers::class, 'create']);
     Route::post('/klien', [KlienControllers::class, 'store']);
     Route::get('/klien/edit/{id}', [KlienControllers::class, 'edit']);
+    Route::put('/klien/{id}', [KlienControllers::class, 'update']);
     Route::delete('/klien/{id}', [KlienControllers::class, 'destroy']);
 
     Route::get('/paket',[PaketController::class, 'index']);
     Route::get('/paket/form', [PaketController::class, 'create']);
     Route::post('/paket', [PaketController::class, 'store']);
     Route::get('/paket/edit/{id}', [PaketController::class, 'edit']);
+    Route::put('/paket/{id}', [PaketController::class, 'update']);
     Route::delete('/paket/{id}', [PaketController::class, 'destroy']);
 });
