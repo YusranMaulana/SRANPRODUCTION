@@ -65,7 +65,8 @@ class PaketController extends Controller
      */
     public function edit($id)
     {
-        //
+        $paket = paket::find($id);
+        return view('paket.edit',compact('paket'));
     }
 
     /**
@@ -94,6 +95,9 @@ class PaketController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $paket = paket::find($id);
+        $paket->delete();
+
+        return redirect('/paket');
     }
 }
