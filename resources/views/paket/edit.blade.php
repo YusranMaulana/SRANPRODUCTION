@@ -38,7 +38,8 @@
 
       <div class="card-body">
 
-        <form method="POST" action="/paket">
+        <form method="POST" action="/paket/{{$paket->id}}">
+            @method('PUT')
             @csrf
             <div class="mb-3">
               <label for="exampleInputEmail1" class="form-label">Nama paket</label>
