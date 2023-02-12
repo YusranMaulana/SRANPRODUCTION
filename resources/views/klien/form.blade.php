@@ -49,15 +49,6 @@
               <input type="text" name="email" class="form-control" id="exampleInputPassword1">
             </div>
             <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">Paketan</label>
-              <select name="paket1_id" class="form-control" id="">
-                <option value="">-Pilih paket-</option>
-                @foreach($klien as $data)
-                <option value="{{$data->id}}">{{$data->kode}} - {{$data->klien}}</option>
-                @endforeach
-              </select>
-            </div>
-            <div class="mb-3">
               <label for="exampleInputPassword1" class="form-label">tanggal boking</label>
               <input type="date" name="tgl_pembokingan" class="form-control" id="exampleInputPassword1">
             </div>
