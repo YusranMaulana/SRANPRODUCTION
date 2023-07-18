@@ -1,17 +1,17 @@
 @extends('layouts.master')
-@section('Judul', 'klien')
+@section('Judul', 'paket video ')
 @section('content-header')
 
 <section class="content-header">
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1>Data klien</h1>
+          <h1>Data paket video</h1>
         </div>
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
             <li class="breadcrumb-item"><a href="#">Home</a></li>
-            <li class="breadcrumb-item active">Data klien</li>
+            <li class="breadcrumb-item active">Data paket video</li>
           </ol>
         </div>
       </div>
@@ -25,6 +25,7 @@
     <!-- Default box -->
     <div class="card">
       <div class="card-header">
+        <a href="/paketvideo/form" class="btn" style="color:#c1c1c1 ; background-color:#0b363c">Tambah Data</a>
 
         <div class="card-tools">
           <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
@@ -40,22 +41,19 @@
             <thead>
               <tr>
                 <th scope="col">#</th>
-                <th scope="col">Nama</th>
-                <th scope="col">Email</th>
+                <th scope="col">nama paket</th>
+                <th scope="col">harga</th>
               </tr>
             </thead>
             <tbody>
-                @foreach ($klien as $item)
+                @foreach ($paketvideo as $item)
                 <tr>
                     <th scope="row">{{$nomor++}}</th>
-                    <td>{{$item-> name}}</td>
-                    <td>{{$item-> email}}</td>
+                    <td>{{$item-> nama_paket}}</td>
+                    <td>{{$item-> harga}}</td>        
                     <td>
-                        {{-- edit
-                        <a href="/karyawan/edit/{{$item->id}}" class="btn" style="color:#009da5 ; background-color:#0b363c">Edit</a> --}}
-
-                        {{-- hapus --}}
-                        <button type="button" class="btn" style="color:#ff0000 ; background-color:#0b363c" data-toggle="modal" data-target="#modal-default{{$item->id}}">
+                        <a href="/paketvideo/edit/{{$item->id}}" class="btn btn-sm btn-info">edit</a>
+                        <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#modal-default{{$item->id}}">
                           hapus
                         </button>
                         <div class="modal fade" id="modal-default{{$item->id}}">
@@ -68,11 +66,11 @@
                                 </button>
                               </div>
                               <div class="modal-body">
-                                <p>Yakin data {{$item->name}} ingin dihapus?</p>
+                                <p>Yakin data paket {{$item->paket}} ingin dihapus?</p>
                               </div>
                               <div class="modal-footer justify-content-between">
                                 <button type="button" class="btn btn-default" data-dismiss="modal">Batal</button>
-                                <form action="/klien/{{$item->id}}" method="POST">
+                                <form action="/paketvideo/{{$item->id}}" method="POST">
                                   @method('DELETE')
                                   @csrf
                                   <button type="submit" class="btn" style="color:#c1c1c1 ; background-color:#0b363c">Hapus</button>
@@ -84,7 +82,7 @@
                           <!-- /.modal-dialog -->
                         </div>
                     </td>
-                </tr>
+                  </tr>
                 @endforeach
               
               

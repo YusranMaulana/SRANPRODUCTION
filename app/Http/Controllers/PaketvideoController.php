@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\User;
+use App\Models\paketvideo;
 
-class KlienControllers extends Controller
+class PaketvideoController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,9 +15,8 @@ class KlienControllers extends Controller
     public function index()
     {
         $nomor = 1;
-        $klien = User::where('level','user')->get();
-        return view('klien.index',compact('klien','nomor'));
-
+        $paketvideo = paketvideo::all();
+        return view('paketvideo.index',compact('paketvideo','nomor'));
     }
 
     /**
@@ -27,7 +26,7 @@ class KlienControllers extends Controller
      */
     public function create()
     {
-        return view('klien.form');
+        return view('paketvideo.form');
     }
 
     /**
@@ -38,17 +37,13 @@ class KlienControllers extends Controller
      */
     public function store(Request $request)
     {
-        $klien = new klien;
+        $paketvideo = new Paketvideo;
 
-        $klien -> nama = $request->nama;
-        $klien -> email = $request->email;
-        $klien -> paket = $request->paket;
-        $klien -> tgl_boking = $request->tgl_pembokingan;
-        $klien -> pembokingan = $request->pembokingan;
-        $klien -> pembayaran = $request->pembayaran;
-        $klien -> save();
+        $paketvideo->nama_paket = $request->nama;
+        $paketvideo->harga = $request->harga;
+        $paketvideo->save();
 
-        return redirect('/klien');
+        return redirect('/paketvideo');
     }
 
     /**
@@ -70,8 +65,8 @@ class KlienControllers extends Controller
      */
     public function edit($id)
     {
-        $klien = klien::find($id);
-        return view('klien.edit',compact('klien'));
+        $paketvideo = paketvideo::find($id);
+        return view('paketvideo.edit',compact('paketvideo'));
     }
 
     /**
@@ -83,17 +78,13 @@ class KlienControllers extends Controller
      */
     public function update(Request $request, $id)
     {
-        $klien = klien::find($id);
+        $paketvideo = Paketvideo::find($id);
 
-        $klien -> nama = $request->nama;
-        $klien -> email = $request->email;
-        $klien -> paket = $request->paket;
-        $klien -> tgl_boking = $request->tgl_pembokingan;
-        $klien -> pembokingan = $request->pembokingan;
-        $klien -> pembayaran = $request->pembayaran;
-        $klien -> save();
+        $paketvideo->nama_paket = $request->nama;
+        $paketvideo->harga = $request->harga;
+        $paketvideo->save();
 
-        return redirect('/klien');
+        return redirect('paketvideo');
     }
 
     /**
@@ -104,9 +95,9 @@ class KlienControllers extends Controller
      */
     public function destroy($id)
     {
-        $klien = User::find($id);
-        $klien->delete();
+        $paketvideo = paketvideo::find($id);
+        $paketvideo->delete();
 
-        return redirect('/klien');
+        return redirect('/paketvideo');
     }
 }

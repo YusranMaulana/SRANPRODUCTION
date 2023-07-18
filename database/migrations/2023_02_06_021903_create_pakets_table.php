@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('pakets', function (Blueprint $table) {
             $table->id();
-            $table->string('nama_paket');
-            $table->integer('harga');
+            $table->biginteger('datahargas_id');
+            $table->date('tgl_boking');
             $table->timestamps();
         });
     }

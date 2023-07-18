@@ -5,14 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>@yield('judul')</title>
 
-  <!-- Google Font: Source Sans Pro -->
+  {{-- Google Font: Source Sans Pro --}}
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
-  <!-- Font Awesome -->
+  {{-- Font Awesome  --}}
   <link rel="stylesheet" href="{{ asset('../../plugins/fontawesome-free/css/all.min.css')}}">
-  <!-- Theme style -->
+  {{-- Theme style  --}}
   <link rel="stylesheet" href="{{ asset('../../dist/css/adminlte.min.css')}}">
+  {{-- link bootstrap --}}
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
 </head>
-<body class="hold-transition sidebar-mini">
+
+<body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
 <!-- Site wrapper -->
 <div class="wrapper">
   <!-- Navbar -->
@@ -23,10 +26,7 @@
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="../../index3.html" class="nav-link">Home</a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link">Contact</a>
+        <a href="/" class="nav-link">Home</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
         <a href="{{ route('logout') }}" class="nav-link" onclick="event.preventDefault();
@@ -61,111 +61,16 @@
         </div>
       </li>
 
-      <!-- Messages Dropdown Menu -->
-      <li class="nav-item dropdown">
-        <a class="nav-link" data-toggle="dropdown" href="#">
-          <i class="far fa-comments"></i>
-          <span class="badge badge-danger navbar-badge">3</span>
-        </a>
-        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-          <a href="#" class="dropdown-item">
-            <!-- Message Start -->
-            <div class="media">
-              <img src="../../dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
-              <div class="media-body">
-                <h3 class="dropdown-item-title">
-                  Brad Diesel
-                  <span class="float-right text-sm text-danger"><i class="fas fa-star"></i></span>
-                </h3>
-                <p class="text-sm">Call me whenever you can...</p>
-                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
-              </div>
-            </div>
-            <!-- Message End -->
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
-            <!-- Message Start -->
-            <div class="media">
-              <img src="../../dist/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
-              <div class="media-body">
-                <h3 class="dropdown-item-title">
-                  John Pierce
-                  <span class="float-right text-sm text-muted"><i class="fas fa-star"></i></span>
-                </h3>
-                <p class="text-sm">I got your message bro</p>
-                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
-              </div>
-            </div>
-            <!-- Message End -->
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
-            <!-- Message Start -->
-            <div class="media">
-              <img src="../../dist/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
-              <div class="media-body">
-                <h3 class="dropdown-item-title">
-                  Nora Silvester
-                  <span class="float-right text-sm text-warning"><i class="fas fa-star"></i></span>
-                </h3>
-                <p class="text-sm">The subject goes here</p>
-                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
-              </div>
-            </div>
-            <!-- Message End -->
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item dropdown-footer">See All Messages</a>
-        </div>
-      </li>
-      <!-- Notifications Dropdown Menu -->
-      <li class="nav-item dropdown">
-        <a class="nav-link" data-toggle="dropdown" href="#">
-          <i class="far fa-bell"></i>
-          <span class="badge badge-warning navbar-badge">15</span>
-        </a>
-        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-          <span class="dropdown-item dropdown-header">15 Notifications</span>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
-            <i class="fas fa-envelope mr-2"></i> 4 new messages
-            <span class="float-right text-muted text-sm">3 mins</span>
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
-            <i class="fas fa-users mr-2"></i> 8 friend requests
-            <span class="float-right text-muted text-sm">12 hours</span>
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
-            <i class="fas fa-file mr-2"></i> 3 new reports
-            <span class="float-right text-muted text-sm">2 days</span>
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
-        </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" data-widget="fullscreen" href="#" role="button">
-          <i class="fas fa-expand-arrows-alt"></i>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
-          <i class="fas fa-th-large"></i>
-        </a>
-      </li>
     </ul>
   </nav>
   <!-- /.navbar -->
 
   <!-- Main Sidebar Container -->
-  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+  <aside class="main-sidebar elevation-4" style=" background-color:#0b363c" >
     <!-- Brand Logo -->
-    <a href="../../index3.html" class="brand-link">
+    <a href="https://www.instagram.com/s__r__a__n__/" class="brand-link" style="color:#c1c1c1">
       <img src="../../dist/img/logo 2023 .png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light"><h5>SRAN PRODUCTION</h5></span>
+      <span class="brand-text font-weight-light" style="color:#c1c1c1"><h6>SRAN PRODUCTION</h6></span>
     </a>
 
     <!-- Sidebar -->
@@ -176,7 +81,7 @@
           <img src="../../dist/img/pp.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">yusran maulana</a>
+          <a href="https://www.instagram.com/yusranmlna/" class="d-block" style="color:#c1c1c1">yusran maulana</a>
         </div>
       </div>
 
@@ -186,50 +91,96 @@
           <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
           <div class="input-group-append">
             <button class="btn btn-sidebar">
-              <i class="fas fa-search fa-fw"></i>
+              <i class="fas fa-search fa-fw" style="color:#c1c1c1"></i>
             </button>
           </div>
         </div>
       </div>
 
-      <!-- Sidebar Menu -->
-      <nav class="mt-2">
-        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+      <nav class="mt-2" >
+        <ul class="nav nav-pills nav-sidebar flex-column"  data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
+          
+          @if(auth()->user()->level=="admin")
+        
+          {{-- admin --}}
+          <li class="nav-item" >
+            <a href="/klien" class="nav-link" style="color:#c1c1c1">
+              <i class="nav-icon fas fa-users" style="color:#c1c1c1"></i>
+              <p >
+                Data klien
+              </p>
+            </a>
+          </li>
           <li class="nav-item">
-            <a href="/klien" class="nav-link">
-              <i class="nav-icon fas fa-camera"></i>
+            <a href="/karyawan" class="nav-link" style="color:#c1c1c1">
+              <i class="nav-icon fas fa-user-tie" style="color:#c1c1c1"></i>
+              <p>
+                Data karyawan
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="/harga" class="nav-link" style="color:#c1c1c1">
+            <i class="nav-solid fas fa-credit-card" style="margin-left: 6px; margin-right: 6px ; color:#c1c1c1"></i>
+              <p>
+                Data Harga
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="pemesanan" class="nav-link" style="color:#c1c1c1">
+            <i class="nav-solid fas fa-envelope" style="margin-left: 6px; margin-right: 6px ; color:#c1c1c1"></i>
+              <p>
+                Data Pemesanan
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="/upload" class="nav-link" style="color:#c1c1c1" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+              <i class="nav-solid fas fa-upload" style="margin-left: 7px; margin-right: 7px ; color:#c1c1c1"></i>
+              <p>
+                Upload
+              </p>
+            </a>
+          </li>
+          
+          @elseif(auth()->user()->level=="user")
+          {{-- user --}}
+           <li class="nav-item">
+            <a href="/paket" class="nav-link" style="color:#c1c1c1">
+              <i class="nav-icon fas fa-camera" style="color:#c1c1c1"></i>
               <p>
                 Paket photo
               </p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="/paket" class="nav-link">
-              <i class="nav-icon fas fa-video"></i>
+            <a href="/paketvideo" class="nav-link" style="color:#c1c1c1">
+              <i class="nav-icon fas fa-video" style="color:#c1c1c1"></i>
               <p>
-                Paket
+                Paket video
               </p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="/klien" class="nav-link">
-              <i class="nav-icon fas fa-users"></i>
+            <a href="/deatline" class="nav-link" style="color:#c1c1c1">
+              <i class="nav-solid fas fa-hourglass-start" style="margin-left: 8px; margin-right: 8px; color:#c1c1c1" ></i>
               <p>
-                Data klien
+                Deatline
               </p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="/jurusan" class="nav-link">
-              <i class="nav-icon fas fa-user-tie"></i>
+            <a href="/myalbum" class="nav-link" style="color:#c1c1c1">
+              <i class="nav-regular fas fa-file-image" style="margin-left: 8px; margin-right: 8px; color:#c1c1c1" ></i>
               <p>
-                Data Admin
+                My Album
               </p>
             </a>
           </li>
-          
+            @endif
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
@@ -239,49 +190,9 @@
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    {{-- <section class="content-header">
-      <div class="container-fluid">
-        <div class="row mb-2">
-          <div class="col-sm-6">
-            <h1>Blank Page</h1>
-          </div>
-          <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Blank Page</li>
-            </ol>
-          </div>
-        </div>
-      </div><!-- /.container-fluid -->
-    </section> --}}
+   
     @yield('content-header')
-    <!-- Main content -->
-    {{-- <section class="content">
-      <!-- Default box -->
-      <div class="card">
-        <div class="card-header">
-          <h3 class="card-title">Title</h3>
-          <div class="card-tools">
-            <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-              <i class="fas fa-minus"></i>
-            </button>
-            <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
-              <i class="fas fa-times"></i>
-            </button>
-          </div>
-        </div>
-        <div class="card-body">
-          Start creating your amazing application!
-        </div>
-        <!-- /.card-body -->
-        <div class="card-footer">
-          Footer
-        </div>
-        <!-- /.card-footer-->
-      </div>
-      <!-- /.card -->
-    </section> --}}
+      
     @yield('content')
     <!-- /.content -->
   </div>
@@ -291,7 +202,7 @@
     <div class="float-right d-none d-sm-block">
       <b>Version</b> 3.2.0
     </div>
-    <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
+    <strong>SRAN PRODUCTION &copy; 2023-2024 <a href="https://www.pexels.com/id-id/@sran-production-340355725/">Album</a>.</strong> All rights reserved.
   </footer>
 
   <!-- Control Sidebar -->
@@ -309,6 +220,7 @@
 <!-- AdminLTE App -->
 <script src="{{ asset('../../dist/js/adminlte.min.js')}}"></script>
 <!-- AdminLTE for demo purposes -->
-<script src="{{ asset('../../dist/js/demo.js')}}"></script>
+{{-- <script src="{{ asset('../../dist/js/demo.js')}}"></script> --}}
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 </body>
 </html>

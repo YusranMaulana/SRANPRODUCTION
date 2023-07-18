@@ -1,17 +1,17 @@
 @extends('layouts.master')
-@section('Judul', 'klien')
+@section('Judul', 'pemesanan')
 @section('content-header')
 
 <section class="content-header">
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1>Data klien</h1>
+          <h1>Data pemesananan</h1>
         </div>
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
             <li class="breadcrumb-item"><a href="#">Home</a></li>
-            <li class="breadcrumb-item active">Data klien</li>
+            <li class="breadcrumb-item active">Data pemesanan</li>
           </ol>
         </div>
       </div>
@@ -25,6 +25,7 @@
     <!-- Default box -->
     <div class="card">
       <div class="card-header">
+        <a href="/pemesanan/form" class="btn" style="color:#c1c1c1 ; background-color:#0b363c">Pesan</a>
 
         <div class="card-tools">
           <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
@@ -40,19 +41,25 @@
             <thead>
               <tr>
                 <th scope="col">#</th>
-                <th scope="col">Nama</th>
-                <th scope="col">Email</th>
+                <th scope="col">nama</th>
+                <th scope="col">email</th>
+                <th scope="col">alamat</th>
+                <th scope="col">telp</th>
+                <th scope="col">tanggal</th>
               </tr>
             </thead>
             <tbody>
-                @foreach ($klien as $item)
+                @foreach ($datapemesanan as $item)
                 <tr>
                     <th scope="row">{{$nomor++}}</th>
-                    <td>{{$item-> name}}</td>
+                    <td>{{$item-> nama}}</td>
                     <td>{{$item-> email}}</td>
+                    <td>{{$item-> alamat}}</td>
+                    <td>{{$item-> telp}}</td>
+                    <td>{{$item-> tanggal}}</td>
                     <td>
-                        {{-- edit
-                        <a href="/karyawan/edit/{{$item->id}}" class="btn" style="color:#009da5 ; background-color:#0b363c">Edit</a> --}}
+                        {{-- edit --}}
+                        <a href="/pemesanan/edit/{{$item->id}}" class="btn" style="color:#009da5 ; background-color:#0b363c">Edit</a>
 
                         {{-- hapus --}}
                         <button type="button" class="btn" style="color:#ff0000 ; background-color:#0b363c" data-toggle="modal" data-target="#modal-default{{$item->id}}">
@@ -68,11 +75,11 @@
                                 </button>
                               </div>
                               <div class="modal-body">
-                                <p>Yakin data {{$item->name}} ingin dihapus?</p>
+                                <p>Yakin data pesanan {{$item->nama}} ingin dihapus?</p>
                               </div>
                               <div class="modal-footer justify-content-between">
                                 <button type="button" class="btn btn-default" data-dismiss="modal">Batal</button>
-                                <form action="/klien/{{$item->id}}" method="POST">
+                                <form action="/pemesanan/{{$item->id}}" method="POST">
                                   @method('DELETE')
                                   @csrf
                                   <button type="submit" class="btn" style="color:#c1c1c1 ; background-color:#0b363c">Hapus</button>
@@ -84,7 +91,7 @@
                           <!-- /.modal-dialog -->
                         </div>
                     </td>
-                </tr>
+                  </tr>
                 @endforeach
               
               

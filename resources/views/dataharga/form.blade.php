@@ -5,12 +5,11 @@
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1>Tambah Data paket</h1>
+          <h1>Data Harga</h1>
         </div>
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
-            <li class="breadcrumb-item"><a href="#">Home</a></li>
-            <li class="breadcrumb-item active">Tambah Data paket</li>
+            <li class="breadcrumb-item active">Input Data Harga</li>
           </ol>
         </div>
       </div>
@@ -36,23 +35,14 @@
         </div>
       </div>
       <div class="card-body">
-        <form method="POST" action="/paket">
+        <form method="POST" action="/harga">
             @csrf
             <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label" >nama paket</label>
-              <select name="nama" class="form-control" aria-label="Default select example">
-                <option selected>Pilih Paket</option>
-                <option value="1">Nikah</option>
-                <option value="2">Prewedding</option>
-                <option value="3">Akikah</option>
-                <option value="4">7 Bulanan</option>
-                <option value="5">Wisuda</option>
-                <option value="6">Dokumenter</option>
-                <option value="7">Iklan</option>
-              </select>
+              <label for="exampleInputEmail1" class="form-label">Nama paket</label>
+              <input type="text" name="nama" class="form-control" id="exampleInputPassword1">
             </div>
             <div class="mb-3">
-              <label for="exampleInputPassword1" class="form-label">harga</label>
+              <label for="exampleInputPassword1" class="form-label">Harga</label>
               <input type="text" name="harga" class="form-control" id="exampleInputPassword1">
             </div>
             <button type="submit" class="btn" style="color:#c1c1c1 ; background-color:#0b363c">Tambah Data</button>
