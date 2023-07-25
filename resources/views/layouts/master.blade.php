@@ -130,7 +130,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="pemesanan" class="nav-link" style="color:#c1c1c1">
+            <a href="/pemesanan" class="nav-link" style="color:#c1c1c1">
             <i class="nav-solid fas fa-envelope" style="margin-left: 6px; margin-right: 6px ; color:#c1c1c1"></i>
               <p>
                 Data Pemesanan
@@ -138,7 +138,8 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="/upload" class="nav-link" style="color:#c1c1c1" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+            {{-- <a href="/upload" class="nav-link" style="color:#c1c1c1" data-bs-toggle="modal" data-bs-target="#staticBackdrop"> --}}
+            <a href="/upload" class="nav-link" style="color:#c1c1c1">
               <i class="nav-solid fas fa-upload" style="margin-left: 7px; margin-right: 7px ; color:#c1c1c1"></i>
               <p>
                 Upload

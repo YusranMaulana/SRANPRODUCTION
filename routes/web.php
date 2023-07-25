@@ -62,8 +62,8 @@ Route::middleware(['auth','level:admin'])->group(function(){
     Route::get('/upload/form',[UploadController::class, 'create']);
     Route::post('/upload', [UploadController::class, 'store']);
     Route::delete('/upload/{id}', [UploadController::class, 'destroy']);
+    Route::put('/upload/{id}', [UploadController::class, 'ubah']);
     Route::get('/upload/edit/{id}', [UploadController::class, 'edit']);
-    Route::put('/edit/{id}', [UploadController::class, 'update']);
 
     Route::get('/harga',[HargaController::class, 'index']);
     Route::get('/harga/form',[HargaController::class, 'create']);
@@ -80,4 +80,4 @@ Route::middleware(['auth','level:admin'])->group(function(){
     Route::put('/pemesanan/{id}', [PemesananController::class, 'update']);
 });
 
-
+Route::get('/pemesanan/form',[PemesananController::class, 'create']);

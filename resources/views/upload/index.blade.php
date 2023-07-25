@@ -1,17 +1,17 @@
 @extends('layouts.master')
-@section('Judul', 'paket video')
+@section('Judul', 'upload')
 @section('content-header')
 
 <section class="content-header">
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1>Data paket</h1>
+          <h1>upload</h1>
         </div>
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
             <li class="breadcrumb-item"><a href="#">Home</a></li>
-            <li class="breadcrumb-item active">Data paket</li>
+            <li class="breadcrumb-item active">upload</li>
           </ol>
         </div>
       </div>
@@ -25,7 +25,7 @@
     <!-- Default box -->
     <div class="card">
       <div class="card-header">
-        <a href="" class="btn btn-primary">Tambah Data</a>
+        <a href="\upload\form" class="btn" style="color:#c1c1c1 ; background-color:#0b363c">Upload</a>
 
         <div class="card-tools">
           <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
@@ -41,18 +41,18 @@
             <thead>
               <tr>
                 <th scope="col">#</th>
-                <th scope="col">nama paket</th>
-                <th scope="col">harga</th>
+                <th scope="col">Nama file</th>
+                <th scope="col">Harga</th>
               </tr>
             </thead>
             <tbody>
-                @foreach ($paket as $item)
+                @foreach ($upload as $item)
                 <tr>
                     <th scope="row">{{$nomor++}}</th>
                     <td>{{$item-> nama_paket}}</td>
                     <td>{{$item-> harga}}</td>        
                     <td>
-                        <a href="/paket/edit/{{$item->id}}" class="btn btn-sm btn-info">edit</a>
+                        <a href="/upload/edit/{{$item->id}}" class="btn btn-sm btn-info">edit</a>
                         <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#modal-default{{$item->id}}">
                           hapus
                         </button>
@@ -70,7 +70,7 @@
                               </div>
                               <div class="modal-footer justify-content-between">
                                 <button type="button" class="btn btn-default" data-dismiss="modal">Batal</button>
-                                <form action="/paket/{{$item->id}}" method="POST">
+                                <form action="/upload/{{$item->id}}" method="POST">
                                   @method('DELETE')
                                   @csrf
                                   <button type="submit" class="btn btn-primary">Hapus</button>

@@ -1,12 +1,12 @@
 @extends('layouts.master')
-@section('judul', 'paket video')
+@section('judul', 'upload ')
 @section('content-header')
 
     <section class="content-header">
         <div class="container-fluid">
           <div class="row mb-2">
             <div class="col-sm-6">
-              <h1>paket video</h1>
+              <h1>Upload Ulang</h1>
             </div>
             <div class="col-sm-6">
               <ol class="breadcrumb float-sm-right">
@@ -38,19 +38,19 @@
 
       <div class="card-body">
 
-          <form method="POST" action="/upload/edit/{{$edit->id}}">
+        <form method="POST" action="/upload/{{$edit->id}}">
             @method('PUT')
             @csrf
-            <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">Nama paket</label>
-              <input type="text" name="nama" VALUE="{{$paket->nama_paket}}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-            </div>
-            <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">harga</label>
-              <input type="text" name="harga" VALUE="{{$paket->harga}}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-            </div>
-            
-            <button type="submit" class="btn btn-primary">Tambah Data</button>
+              <div class="card-body">
+                <div class="file-input-wrapper">
+                  <input type="file" id="fileInput" name="namafile" class="file-input" value="{{$edit->nama_paket}}">
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Harga</label>
+                  <input type="text" name="harga" class="form-control" id="exampleInputPassword1" value={{$edit->harga}}>
+                </div>
+                <button type="submit" class="btn" style="color:#c1c1c1 ; background-color:#0b363c">Upload</button>
+              </div>
           </form>
       </div>
       <!-- /.card-body -->
