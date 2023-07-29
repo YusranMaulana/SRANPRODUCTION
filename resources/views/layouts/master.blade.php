@@ -173,6 +173,7 @@
               </p>
             </a>
           </li>
+
           <li class="nav-item">
             <a href="/myalbum" class="nav-link" style="color:#c1c1c1">
               <i class="nav-regular fas fa-file-image" style="margin-left: 8px; margin-right: 8px; color:#c1c1c1" ></i>

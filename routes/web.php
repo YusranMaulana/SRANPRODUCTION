@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\KlienControllers;
 use App\Http\Controllers\PaketController;
 use App\Http\Controllers\PaketvideoController;
@@ -8,7 +9,12 @@ use App\Http\Controllers\KaryawanController;
 use App\Http\Controllers\UploadController;
 use App\Http\Controllers\HargaController;
 use App\Http\Controllers\PemesananController;
+use App\Http\Controllers\MyalbumController;
 
+
+Route::get('/myalbum', function () {
+    return 'Hello World';
+});
 
 Auth::routes();
 
@@ -19,7 +25,9 @@ Route::middleware(['auth','level:user'])->group(function(){
     // Route::get('/', function () {
     //     return view('index user.index');
     // })->middleware('auth');
-    Route::get('/index', function(){return view('index user.index');});
+    Route::get('/index', function(){
+        return view('index user.index');
+    });
     Route::get('/klien',[KlienControllers::class, 'index']);
     Route::get('/klien/form', [KlienControllers::class, 'create']);
     Route::post('/klien', [KlienControllers::class, 'store']);
@@ -27,7 +35,7 @@ Route::middleware(['auth','level:user'])->group(function(){
     Route::put('/klien/{id}', [KlienControllers::class, 'update']);
     
 
-    Route::get('/paket',[PaketController::class, 'index']);
+    // Route::get('/paket',[PaketController::class, 'index']);
     Route::get('/paket/form', [PaketController::class, 'create']);
     Route::post('/paket', [PaketController::class, 'store']);
     Route::get('/paket/edit/{id}', [PaketController::class, 'edit']);
@@ -40,6 +48,13 @@ Route::middleware(['auth','level:user'])->group(function(){
     Route::get('/paketviceo/edit/{id}', [PaketvideoController::class, 'edit']);
     Route::put('/paketvideo/{id}', [PaketvideoController::class, 'update']);
     Route::delete('/paketvideo/{id}', [PaketvideoController::class, 'destroy']);
+
+    Route::get('/myalbum',[MyalbumController::class, 'index']);
+    Route::get('/myalbum/form',[MyalbumController::class, 'create']);
+    Route::get('/myalbum/edit/{id}',[MyalbumController::class, 'edit']);
+    Route::delete('/myalbum/{id}', [MyalbumController::class, 'destroy']);
+    Route::post('/myalbum', [MyalbumController::class, 'store']);
+    Route::put('/myalbum/{id}', [MyalbumController::class, 'update']);
 });
 
 Route::middleware(['auth','level:admin'])->group(function(){    
@@ -79,5 +94,3 @@ Route::middleware(['auth','level:admin'])->group(function(){
     Route::post('/pemesanan', [PemesananController::class, 'store']);
     Route::put('/pemesanan/{id}', [PemesananController::class, 'update']);
 });
-
-Route::get('/pemesanan/form',[PemesananController::class, 'create']);

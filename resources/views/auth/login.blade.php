@@ -64,7 +64,7 @@
               <button type="submit" class="btn btn-primary btn-block btn-sm" style="color:#c1c1c1 ; background-color:#0b363c">Sign In</button>
             </div>
             <div class="col-5">
-              <a href="{{ route('register')}}" class="btn btn-primary btn-block btn-sm ml-3" style="color:#c1c1c1 ;margin-top:20 px; background-color:#0b363c">Register</a>
+              <a href="{{ route('register')}}" class="btn btn-primary btn-block btn-sm ml-3" style="color:#c1c1c1 ;margin-top:20px ; background-color:#0b363c">Register</a>
             </div>
           </div>
           <!-- /.col -->

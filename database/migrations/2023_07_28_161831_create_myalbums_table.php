@@ -13,10 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('paketvideos', function (Blueprint $table) {
+        Schema::create('myalbums', function (Blueprint $table) {
             $table->id();
-            $table->biginteger('datahargas_id');
-            $table->date('tgl_boking');
+            $table->string('myalbum');
             $table->timestamps();
         });
     }
@@ -28,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('paketvideos');
+        Schema::dropIfExists('myalbums');
     }
 };

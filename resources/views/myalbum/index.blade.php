@@ -25,7 +25,7 @@
     <!-- Default box -->
     <div class="card">
       <div class="card-header">
-        <a href="/paketvideo/form" class="btn" style="color:#c1c1c1 ; background-color:#0b363c">Tambah Data</a>
+        <a href="/myalbum/form" class="btn" style="color:#c1c1c1 ; background-color:#0b363c">Tambah Data</a>
 
         <div class="card-tools">
           <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
@@ -46,13 +46,12 @@
               </tr>
             </thead>
             <tbody>
-                @foreach ($paketvideo as $item)
+                @foreach ($myalbum as $item)
                 <tr>
                     <th scope="row">{{$nomor++}}</th>
-                    <td>{{$item->nama_paket}}</td>
-                    <td>{{$item->harga}}</td>        
+                    <td>{{$item->myalbum}}</td>  
                     <td>
-                        <a href="/paketvideo/edit/{{$item->id}}" class="btn btn-sm btn-info">edit</a>
+                        <a href="/myalbum/edit/{{$item->id}}" class="btn btn-sm btn-info">edit</a>
                         <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#modal-default{{$item->id}}">
                           hapus
                         </button>
@@ -70,7 +69,7 @@
                               </div>
                               <div class="modal-footer justify-content-between">
                                 <button type="button" class="btn btn-default" data-dismiss="modal">Batal</button>
-                                <form action="/paketvideo/{{$item->id}}" method="POST">
+                                <form action="/myalbum/{{$item->id}}" method="POST">
                                   @method('DELETE')
                                   @csrf
                                   <button type="submit" class="btn" style="color:#c1c1c1 ; background-color:#0b363c">Hapus</button>
